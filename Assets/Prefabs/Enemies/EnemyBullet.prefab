@@ -174,5 +174,5 @@ MonoBehaviour:
   lifetime: 3
   destroyOnLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   hitEffectPrefab: {fileID: 0}

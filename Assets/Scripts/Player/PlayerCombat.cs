@@ -14,6 +14,12 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Transform firePointStanding;
     [SerializeField] private Transform firePointCrouching;
 
+    private void Start()
+    {
+        // Primary is always equipped from the start
+        if (primaryWeapon != null) primaryWeapon.Equip();
+    }
+
     private void Update()
     {
         HandlePrimary();

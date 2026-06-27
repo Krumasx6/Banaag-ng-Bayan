@@ -214,7 +214,7 @@ MonoBehaviour:
   fireRate: 2
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &-8228933801790518924
 MonoBehaviour:
   m_ObjectHideFlags: 0
