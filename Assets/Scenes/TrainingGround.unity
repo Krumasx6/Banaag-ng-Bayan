@@ -1103,6 +1103,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1228,6 +1229,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afb3c326f5b322439544e756f8b7150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollowScript
+  target: {fileID: 1591680485}
+  offset: {x: 0, y: 0, z: -10}
+  damping: 0.3
 --- !u!1 &521841754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,6 +2632,9 @@ GameObject:
   - component: {fileID: 1591680488}
   - component: {fileID: 1591680491}
   - component: {fileID: 1591680490}
+  - component: {fileID: 1591680494}
+  - component: {fileID: 1591680493}
+  - component: {fileID: 1591680492}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2859,6 +2878,52 @@ MonoBehaviour:
   currentAmmo: 0
   infiniteAmmo: 1
   projectilePrefab: {fileID: 7423427371785874422, guid: 88961af1d6cd1984f8823ce052c2b9eb, type: 3}
+--- !u!114 &1591680492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591680480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a6f0b77e6ae79488cd9699fd7d07be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpecial
+--- !u!114 &1591680493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591680480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202aa86ea8124044ea8fd9563730006e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SPManager
+  maxSP: 100
+  spPerKill: 20
+  spPerRescue: 30
+  spPerDamageTaken: 10
+  OnSPChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSPFull:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1591680494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591680480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2c1e3bbba035246b6a9ebc8f4fc234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSelector
 --- !u!1 &1592614945
 GameObject:
   m_ObjectHideFlags: 0

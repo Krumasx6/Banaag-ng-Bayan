@@ -25,10 +25,18 @@ public class HUDManager : MonoBehaviour
 
         playerHealth.OnHealthChanged += UpdateHP;
         playerHealth.OnDeath         += OnPlayerDeath;
-        playerHealth.OnRespawn       += OnPlayerRespawn;
+        playerHealth.OnRespawn       -= OnPlayerRespawn;
 
         // Initialize
         UpdateHP(playerHealth.GetCurrentHP(), playerHealth.GetMaxHP());
+        
+        SPManager sp = playerHealth.GetComponent<SPManager>();
+
+        if (sp != null)
+        {
+            sp.OnSPChanged.AddListener((cur, max) => UpdateSPFromFloat(cur, max));
+            sp.OnSPFull.AddListener(FlashSPBarFull);
+        }
     }
 
     private void OnDestroy()
@@ -70,5 +78,20 @@ public class HUDManager : MonoBehaviour
     private void OnPlayerRespawn()
     {
         Debug.Log("Player respawned.");
+    }
+
+    private void UpdateSPFromFloat(float cur, float max)
+    {
+        // Convert float SP to a sprite index matching your spSprites array
+        int index = Mathf.FloorToInt((cur / max) * (spSprites.Length - 1));
+        index = Mathf.Clamp(index, 0, spSprites.Length - 1);
+        if (spImage != null && spSprites != null && spSprites.Length > 0)
+            spImage.sprite = spSprites[index];
+    }
+
+    private void FlashSPBarFull()
+    {
+        // Optional — add a visual flash here when SP is ready
+        Debug.Log("SP Full — ready to use special!");
     }
 }

@@ -67,6 +67,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         currentHP -= amount;
         currentHP = Mathf.Clamp(currentHP, 0, maxHP);
 
+        GetComponent<SPManager>()?.GrantDamageTaken();
+
         Debug.Log($"[PlayerHealth] TakeDamage — HP now {currentHP}, OnHealthChanged listeners: {OnHealthChanged?.GetInvocationList().Length}");
 
         OnHealthChanged?.Invoke(currentHP, maxHP);
@@ -155,4 +157,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     // Called by CheckpointManager when a new checkpoint is reached
     public void SetRespawnPoint(Transform point) => respawnPoint = point;
+
+    public void ForceInvincible(float duration)
+    {
+        iFrameTimer = duration;
+    }
 }
