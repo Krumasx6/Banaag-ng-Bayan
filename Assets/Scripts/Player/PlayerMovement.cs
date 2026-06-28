@@ -8,11 +8,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float moveSpeed = 7.5f;
 
     [Header("Jump")]
     [SerializeField] private float jumpForce = 12f;
-    [SerializeField] private float doubleJumpForce = 10f;
+    [SerializeField] private float doubleJumpForce = 12f;
+    [SerializeField] private bool maximumJump = 2;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private LayerMask groundLayer;
