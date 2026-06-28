@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b72beb7a8de7fd458b7e54116f004a9
+guid: 8b9c431cebf97384396f7a7b6398db72
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4019466998088921464
-    second: LakanYano_0
+      213: -6162156222565680894
+    second: NaraAlon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LakanYano_0
+      name: NaraAlon_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 871fe7f40f308c730800000000000000
-      internalID: 4019466998088921464
+      spriteID: 2097287609f9b7aa0800000000000000
+      internalID: -6162156222565680894
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LakanYano_0: 4019466998088921464
+      NaraAlon_0: -6162156222565680894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

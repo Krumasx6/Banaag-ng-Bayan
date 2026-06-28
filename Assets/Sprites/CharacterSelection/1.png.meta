@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b72beb7a8de7fd458b7e54116f004a9
+guid: 7a8a18d00d7e40649accf813a468405f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4019466998088921464
-    second: LakanYano_0
+      213: -855298285791758126
+    second: 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LakanYano_0
+      name: 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 15
+        y: 422
+        width: 1618
+        height: 806
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 871fe7f40f308c730800000000000000
-      internalID: 4019466998088921464
+      spriteID: 2d8b16a9dbe5124f0800000000000000
+      internalID: -855298285791758126
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LakanYano_0: 4019466998088921464
+      1_0: -855298285791758126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
